@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#navbar {
+  background-color: black;
+  font-family: "Finlandica", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+#navbar ul li {
+  padding: 5px 20px;
+  margin: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+#navbar .logo img {
+  height: 40px;
+  padding: 0px 7px;
+}
+
+#navbar .logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+#navbar input {
+  text-align: center;
+  width: 10%;
+  height: 30px;
+  margin: 12px 20px;
+  border: 1px solid green;
+  border-radius: 10px;
+}
+
+.song-container::before {
+  content: "";
+  background-image: url("bg.jpg");
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.song-container {
+  min-height: 73vh;
+  width: 70%;
+  display: flex;
+  margin: 20px auto;
+  padding: 20px;
+  color: white;
+}
+
+.songList {
+  text-transform: uppercase;
+  font-family: "Arima", cursive;
+}
+
+.songList h1 {
+  font-weight: bold;
+}
+
+.songItem {
+  background-color: whitesmoke;
+  color: black;
+  padding: 5px 10px;
+  width: 125%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-left: -25px;
+  margin-bottom: 15px;
+}
+
+.songItem img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.playList i {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 0px;
+}
+
+.footer input {
+  width: 80vw;
+  cursor: pointer;
+}
+
+.footer .icons {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.footer .icons i {
+  padding: 0px 5px;
+}
+
+.playingSong {
+  position: absolute;
+  left: 10vw;
+  bottom: 10px;
+}
+
+.playingSong img {
+  height: 45px;
+  width: 70px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+#currentSong {
+  margin-top: 2px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Finlandica", sans-serif;
+  font-size: 1.2rem;
+  color: aquamarine;
+}
+
+/* Media Queries To Make Website Responsive */
+@media screen and (max-width: 1200px) {
+  #navbar input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .playingSong img {
+    height: 40px;
+    width: 60px;
+  }
+  .playingSong {
+    margin-bottom: 10px;
+  }
+  #currentSong {
+    margin-left: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #navbar ul li {
+    padding: 2px 15px;
+    margin: 4px;
+    font-size: 1.1rem;
+  }
+
+  #navbar .logo {
+    font-size: 1.1rem;
+  }
+  .playingSong img {
+    height: 35px;
+    width: 50px;
+  }
+  #currentSong {
+    margin-left: 4px;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #navbar ul li {
+    padding: 1px 10px;
+    margin: 3px;
+    font-size: 0.9rem;
+  }
+
+  #navbar .logo {
+    font-size: 0.9rem;
+  }
+
+  .songList h1 {
+    font-size: 1.2rem;
+    margin-left: 40px;
+  }
+
+  .songItem {
+    padding: 3px 6px;
+    width: 130%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    margin-left: -5px;
+    margin-bottom: 10px;
+  }
+  .playingSong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .playingSong img {
+    height: 30px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #navbar ul li {
+    padding: 0px 6px;
+    margin: 2px;
+    font-size: 0.7rem;
+  }
+
+  #navbar .logo {
+    font-size: 0.7rem;
+  }
+
+  .playingSong {
+    margin-left: -5px;
+  }
+
+  .playingSong img {
+    height: 20px;
+    width: 30px;
+  }
+
+  #currentSong {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #navbar .logo img {
+    height: 35px;
+    padding: 0px 3px;
+  }
+
+  #navbar ul li {
+    padding: 0px 6px;
+    margin: 0px 2px;
+    font-size: 0.6rem;
+  }
+
+  #navbar .logo {
+    font-size: 0.6rem;
+  }
+
+  .songList h1 {
+    font-size: 1.1rem;
+    margin-left: 30px;
+  }
+
+  .songItem img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .playingSong {
+    margin-left: -25px;
+  }
+
+  .playingSong img {
+    height: 20px;
+    width: 30px;
+  }
+
+  #currentSong {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #navbar {
+    justify-content: space-between;
+    margin-left: -10px;
+  }
+
+  #navbar ul li {
+    padding: 0px 5px;
+    margin: 0px;
+    font-size: 0.7rem;
+  }
+
+  #navbar .logo {
+    font-size: 0.6rem;
+  }
+
+  .playingSong {
+    margin-left: 95px;
+    bottom: 75px;
+  }
+
+  .playingSong img {
+    height: 25px;
+    width: 35px;
+  }
+
+  #currentSong {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #navbar {
+    justify-content: space-between;
+    margin-left: -25px;
+  }
+
+  #navbar ul li {
+    padding: 0px 3.5px;
+    margin: 0px;
+    font-size: 0.6rem;
+  }
+
+  #navbar .logo {
+    font-size: 0.6rem;
+  }
+
+  .songItem {
+    margin-left: -20px;
+    margin-bottom: 10px;
+  }
+
+  .songItem img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .playingSong {
+    margin-left: 75px;
+    bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  #navbar ul li {
+    padding: 0px 3px;
+    margin: 0px;
+    font-size: 0.5rem;
+  }
+
+  #navbar .logo {
+    font-size: 0.5rem;
+  }
+
+  .songList h1 {
+    font-size: 0.7rem;
+  }
+
+  .songName {
+    font-size: 0.5rem;
+  }
+
+  .playingSong {
+    margin-left: 50px;
+    bottom: 75px;
+  }
+}
